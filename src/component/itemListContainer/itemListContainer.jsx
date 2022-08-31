@@ -1,6 +1,15 @@
-const ItemListContainer = ({title}) => {
+
+import Counter from '../Counter/Counter';
+
+const ItemListContainer = () => {
+    function onAdd(count) {
+        console.log(`se han seleccionado ${count} productos`)
+    }
     return (
-        <h1>{title}</h1>
+        <div>
+            <Counter stock={5} onAdd={onAdd}/>
+        </div>
+        
     )
 }
 

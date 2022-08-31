@@ -8,3 +8,26 @@
     background-color: cornflowerblue;
     color: white;
 }
+
+.counter-box {
+    margin: 100px;
+    padding: 100px;
+    background-color: black;
+    color: #ff012f;
+}
+
+.btn {
+    background-color: #000;
+    padding: 10px 15px;
+    margin: 2px;
+    color: #fafafa;
+    border: none;
+    border-radius: 5px;
+    cursor:pointer;
+}
+
+@media(max-width: 800px) {
+    .counter-box{
+        max-width: 80vw;
+    }
+}
