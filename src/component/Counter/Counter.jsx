@@ -1,22 +1,22 @@
 import {useState} from 'react';
 
-const Counter = ({stock, onAdd}) => {
+const Counter = ({stock, onAdd, min, sum, res}) => {
     const [count, setCount] = useState(1)
 
     function add (){
         if (count < stock){
-        setCount(count + 1)
+        setCount(count + sum)
         }
     }
 
     function substract(){
         if (count > 0){
-        setCount (count -1)
+        setCount (count - res)
         }
     }
 
     function reset(){
-        setCount(1)
+        setCount(min)
     }
 
     return (

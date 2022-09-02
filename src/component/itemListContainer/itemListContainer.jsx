@@ -7,7 +7,7 @@ const ItemListContainer = () => {
     }
     return (
         <div>
-            <Counter stock={5} onAdd={onAdd}/>
+            <Counter stock={5} onAdd={onAdd} min={1} sum={1} res={1}/>
         </div>
         
     )
