@@ -1,5 +1,5 @@
 import React from "react";
-import { Card } from './component/Card/Card';
+import { Card } from '../Card/Card';
 
 export const ItemList = ({productList}) => {
     return (

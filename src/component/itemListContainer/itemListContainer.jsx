@@ -1,9 +1,12 @@
 import React, { useEffect, useState} from 'react';
-import { products } from './component/products/products';
+import { products } from '../products/products';
 import  {ItemList}  from '../ItemList/ItemList';
+// import { useParams} from 'react-router-dom';
 
 export const ItemListContainer = () => {
     const [ProductList, setProductList] = useState([])
+
+    // const {categoria} = useParams()
 
 
 

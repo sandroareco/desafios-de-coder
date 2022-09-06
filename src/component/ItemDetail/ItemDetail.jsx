@@ -1,5 +1,5 @@
-import Counter from './component/Counter/Counter';
-import './component/ItemDetail.css';
+import Counter from '../Counter/Counter';
+import './ItemDetail.css';
 
 export const ItemDetail = ({item}) => {
 
@@ -17,7 +17,7 @@ export const ItemDetail = ({item}) => {
                 </div>
                 <div className="card-detail-right">
                     <p>{item.description} </p>
-                    <p className="price"> $ {item.precio} </p>
+                    <p className="price"> $ {item.price} </p>
                     <p>stock: {item.stock} </p>
                     <Counter stock = {item.stock} initial={0} onAdd= {onAdd} />
                 </div>

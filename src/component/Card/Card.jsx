@@ -3,7 +3,7 @@ import './Card.css'
 import { Link } from 'react-router-dom';
 
 export const Card = ({productList}) => {
-    const{title, img, precio, id} = productList
+    const{title, img, price, id} = productList
     return (
         <div className='card-container'>
             <h4>{title}</h4>
