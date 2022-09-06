@@ -22,7 +22,7 @@ const Counter = ({stock, onAdd, min, sum, res}) => {
     return (
     <div>
         <div className='counter-box'>
-             <h1>Counter </h1>
+             <h1>Carrito </h1>
              <p>stock: {stock} </p>
              <p>Cantidad: {count} </p>
         <div>  

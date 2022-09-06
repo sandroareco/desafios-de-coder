@@ -1,21 +1,30 @@
-import {React, useState} from 'react';
+import React from 'react';
+import { BrowserRouter, Routes, Route} from 'react-router-dom';
 import './App.css';
-import ItemListContainer from './component/itemListContainer/itemListContainer';
-import { AiOutlineShoppingCart } from 'react-icons/ai';
-import Navbar from './component/Navbar/Navbar';
-import Counter from './component/Counter/Counter';
-import Productos from './component/Productos';
+import {ItemListContainer}  from './component/itemListContainer/itemListContainer';
+import { Navbar } from './component/Navbar/Navbar';
+import {ItemDetailContainer} from './component/ItemDetailContainer/ItemDetailContainer';
+
 
 
 const App = () => {
 
-  return (
-    <div className="App">
+    return (
+      <BrowserRouter>
+      <div className="App">
+
       <Navbar/>
-      <ItemListContainer/>
-      <Productos/>
-      <AiOutlineShoppingCart className='icon'  />
-    </div>
+
+        <Routes>
+        
+         <Route path='/' element={  <ItemListContainer  /> } />
+         <Route path='/productos' element={  <ItemListContainer  /> } />
+         <Route path='/detalles/:id' element={ <ItemDetailContainer /> } />
+    
+        </Routes>
+      </div>
+ 
+    </BrowserRouter>
   );
 }
 
