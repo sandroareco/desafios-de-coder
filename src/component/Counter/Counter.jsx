@@ -1,6 +1,6 @@
 import {useState} from 'react';
 
-const Counter = ({stock, onAdd, min, sum, res}) => {
+export const Counter = ({stock, onAdd, min, sum, res}) => {
     const [count, setCount] = useState(1)
 
     function add (){
@@ -36,4 +36,4 @@ const Counter = ({stock, onAdd, min, sum, res}) => {
     );
 }
 
-export default Counter;
+

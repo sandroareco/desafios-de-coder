@@ -1,9 +1,10 @@
-import React from "react";
+import React from 'react';
 import './Card.css'
 import { Link } from 'react-router-dom';
 
-export const Card = ({productList}) => {
-    const{title, img, price, id} = productList
+
+export const Card = ({item}) => {
+    const{title, img, price, id} = item
     return (
         <div className='card-container'>
             <h4>{title}</h4>

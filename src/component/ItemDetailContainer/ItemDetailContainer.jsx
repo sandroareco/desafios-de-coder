@@ -1,19 +1,18 @@
 import { useEffect, useState } from 'react';
-import { products } from '../products/products';
+import { products } from '../../mock/products';
 import  {ItemDetail}  from '../ItemDetail/ItemDetail' ;
-// import { useParams} from 'react-router-dom';
+import { useParams} from 'react-router-dom';
 
 
 export const ItemDetailContainer = () => {
 
-    // const {id} = useParams()
+    const {id} = useParams()
 
-    // console.log(id);
 
     const [item, setItem] = useState({});
 
     const getProduct = () => new Promise((resolve, reject) => {
-        setTimeout(() => resolve(products.find(product => product.id === 3)), 2000)
+        setTimeout(() => resolve(products.find(product => product.id === Number(id))), 2000)
     })
 
     useEffect(() => {
@@ -24,7 +23,11 @@ export const ItemDetailContainer = () => {
 
 
     return (
-        <ItemDetail item={item}/>
+        <>
+        {
+         item ? <ItemDetail item={item}/>: <h1>cargando...</h1>
+        }
+        </>
     );
 }
 
