@@ -1,22 +1,22 @@
 import {useState} from 'react';
 
-export const Counter = ({stock, onAdd, min, sum, res}) => {
+export const Counter = ({stock, onAdd, initial= 1}) => {
     const [count, setCount] = useState(1)
 
     function add (){
         if (count < stock){
-        setCount(count + sum)
+        setCount(count + 1)
         }
     }
 
     function substract(){
         if (count > 0){
-        setCount (count - res)
+        setCount (count - 1)
         }
     }
 
     function reset(){
-        setCount(min)
+        setCount(0)
     }
 
     return (
@@ -30,7 +30,7 @@ export const Counter = ({stock, onAdd, min, sum, res}) => {
             <button className='btn' onClick={reset} > Reset</button>
             <button className='btn' onClick={add} > + </button>
         </div>
-            <button className='btn' onClick={() => onAdd(count)}>Confirmar</button>
+            <button className='btn' onClick={() => onAdd(count)}>añadir al carrito</button>
         </div>
     </div>
     );

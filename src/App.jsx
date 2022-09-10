@@ -11,18 +11,17 @@ import {ItemDetailContainer} from './component/ItemDetailContainer/ItemDetailCon
 const App = () => {
 
     return (
-     <BrowserRouter> 
-     <Routes> 
-      <Navbar/>
-     <div className="App">
-        <Route path='/' element= {<ItemListContainer/>} />
-        <Route path='/categoria:categoria' element= {<ItemListContainer/>} />
-        <Route path='/detalles:id' element= {<ItemDetailContainer/>} />
 
-      </div>
+    <div className="App">
+     <BrowserRouter> 
+     <Navbar/>
+     <Routes> 
+        <Route path="/" element= {<ItemListContainer/>} />
+        <Route path="/categoria/:categoria" element= {<ItemListContainer/>} />
+        <Route path="/detalles/:id" element= {<ItemDetailContainer/>} />
      </Routes>
-     
      </BrowserRouter>
+     </div>
     
   );
 }

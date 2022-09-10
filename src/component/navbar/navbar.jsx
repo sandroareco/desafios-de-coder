@@ -2,7 +2,7 @@ import './Navbar.css'
 import { Link } from 'react-router-dom';
 
  export const Navbar = () => {
-    return(
+    return (
      <header className='header'>
       <nav>
         <ul className='nav-items'>

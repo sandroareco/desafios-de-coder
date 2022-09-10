@@ -24,17 +24,16 @@ export const ItemListContainer = () => {
         getProducts()
         .then(products => setProductList(products))
         .catch(error => console.error(error))
-
-        return () =>{
+        return () => {
             setProductList([])
         }
-
     }, [categoria])
+
 
     return(
         <>
             {
-               productList.length ? <ItemList productList={productList} /> : <h1>Cargando...</h1>
+              ProductList.length ? <ItemList ProductList={ProductList}/> : <h1>cargando...</h1>
             }       
         </>
         
