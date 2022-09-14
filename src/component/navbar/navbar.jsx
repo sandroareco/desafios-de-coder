@@ -1,24 +1,24 @@
 import './Navbar.css'
 import { Link } from 'react-router-dom';
 
- export const Navbar = () => {
+const Navbar = () => {
     return (
      <header className='header'>
       <nav>
         <ul className='nav-items'>
-          <Link to='/'>
+          <Link to='/' className='nav-link'>
           <li>Home</li>
           </Link>
 
-          <Link to='/categoria/remera'>
+          <Link to='/categoria/remera' className='nav-link'>
           <li>Remera</li>
           </Link>
 
-          <Link to='/categoria/jeans'>
+          <Link to='/categoria/jeans' className='nav-link'>
           <li>Jeans</li>
           </Link>
 
-          <Link to='/categoria/buzo'>
+          <Link to='/categoria/buzo' className='nav-link'>
           <li>Buzo</li>
           </Link>
 
@@ -27,3 +27,5 @@ import { Link } from 'react-router-dom';
      </header>
     )
 }
+
+export default Navbar;
