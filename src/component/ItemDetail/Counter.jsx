@@ -1,7 +1,7 @@
 import {useState} from 'react';
-import { products } from '../../mock/products';
+import { Link } from 'react-router-dom';
 
-const Counter = ({stock,title,price,description,onAdd, initial= 1}) => {
+const Counter = ({stock,onAdd, initial= 1}) => {
     const [count, setCount] = useState(1)
 
     function add (){
@@ -31,11 +31,14 @@ const Counter = ({stock,title,price,description,onAdd, initial= 1}) => {
                 <button className='btn' onClick={reset} > Reset</button>
                 <button className='btn' onClick={add} > + </button>
             </div>
-                <button className='btn' onClick={() => onAdd(count)}>añadir al carrito</button>
+            <Link to='/'>
+            <button className='btn' onClick={() => onAdd(count)}>añadir al carrito</button>   
+            </Link> 
             </div>
         </div>
            );
     }
+
 
 
 export default Counter;

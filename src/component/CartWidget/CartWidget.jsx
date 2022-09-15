@@ -1,7 +1,8 @@
-import React from 'react'
+// import {BsCartCheck} from 'react-icons/Bs';
+// export function CartWidget() {
+//   return (
+//    <BsCartCheck />
+//   )
+// }
 
-export const CartWidget = () => {
-  return (
-    <h2>desafio coder house</h2>
-  )
-}
+

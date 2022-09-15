@@ -1,6 +1,10 @@
 import Counter  from '../ItemDetail/Counter';
 import './ItemDetail.css';
 
+
+
+
+
 export const ItemDetail = ({item}) => {
 
 
@@ -19,7 +23,7 @@ export const ItemDetail = ({item}) => {
                     <p>{item.description} </p>
                     <p className="price">${item.price}</p>
                     <p>stock: {item.stock} </p>
-                    <Counter stock={item.stock} initial={1} onAdd={onAdd}  />
+                    <Counter stock={item.stock} initial={1} onAdd={onAdd} />
                 </div>
             </div>
         </article>
